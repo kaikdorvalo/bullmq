@@ -1,0 +1,31 @@
+RabbitMq:
+- Arquitetura de roteamento complexa
+
+Eficaz quando:
+1. clientes com requisitos vagos
+2. Roteamentos complexos
+3. Rotear dados a diferentes aplicativos com vinculação e trocas distintas
+4. Produtor sabe se o cliente consumiu a mensagem (usa modelo push)
+5. Garantir sequências específicas e garantias de entrega ao trocar e analisar dados
+6. Compatibilidade com versões anteriores de protocolos antigos
+
+
+BullMQ
+- filas de trabalhos no Dragonfly ou Redis
+
+Eficaz quando:
+1. Escalabilidade aumentando o número de workers
+2. Controle dos workers com base na carga de trabalho
+3. Filas de prioridade (priorização de trabalhos)
+4. Escutar eventos específicos em filas de trabalho (completed, failed, stalled, outros)
+5. Limitador de taxa para evitar sobrecarga
+6. Agendar tarefas
+
+Kafka:
+
+Eficaz quando:
+1. Precisa reanalisar dados recebidos
+2. Agregação de logs
+3. Mensagens de baixa latência
+4. Análise de dados de streaming em tempo real
+5. Transmite em tempo real
